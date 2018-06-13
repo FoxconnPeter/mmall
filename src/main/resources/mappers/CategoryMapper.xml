@@ -12,6 +12,7 @@
       <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
     </constructor>
   </resultMap>
+
   <sql id="Base_Column_List" >
     id, parent_id, name, status, sort_order, create_time, update_time
   </sql>
@@ -33,6 +34,7 @@
       #{status,jdbcType=BIT}, #{sortOrder,jdbcType=INTEGER}, now(),
       now())
   </insert>
+
   <insert id="insertSelective" parameterType="com.mmall.pojo.Category" >
     insert into mmall_category
     <trim prefix="(" suffix=")" suffixOverrides="," >
@@ -123,19 +125,6 @@
     from mmall_category
     where parent_id = #{parentId}
   </select>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

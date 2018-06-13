@@ -164,7 +164,7 @@
   </update>
 
 
-  <select id="selectCartProductCount" parameterType="int" resultType="int">
+  <select id="selectCartProductCount" parameterType="int" resultType="java.lang.Integer">
     select IFNULL(sum(quantity),0) as count from mmall_cart where user_id = #{userId}
   </select>
 
